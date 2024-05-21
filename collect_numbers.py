@@ -70,7 +70,7 @@ if numbers_collected:
     with open('whatsapp_numbers.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         for number in cleaned_numbers:
-            writer.writerow([number])
+            writer.writerow([f"https://wa.me/{number}"])
     print("Numbers saved in whatsapp_numbers.csv")
 else:
     print("No numbers collected or timed out")
